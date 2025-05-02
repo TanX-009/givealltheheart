@@ -7,7 +7,7 @@ export default defineConfig({
   css: {
     modules: {
       scopeBehaviour: "local", // default
-      generateScopedName: "[name]__[local]___[hash:base64:5]", // same as Next.js default
+      generateScopedName: "[local]__[hash:base64:5]", // same as Next.js default
     },
     postcss: "./postcss.config.js",
   },

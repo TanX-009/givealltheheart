@@ -1,5 +1,32 @@
 .nav {
+  margin: 0 auto;
+  padding: var(--sp-l) var(--sp-m) var(--sp-m) var(--sp-m);
+  width: 100%;
+  max-width: var(--max-view-width);
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--sp-3xs);
+}
+
+.diamond {
+  height: var(--sp-m);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-xl);
+}
+
+.buttons > button {
+  border: none;
+  outline: none;
+
+  font-size: var(--xs);
+
+  color: var(--onPrimary);
+  background: none;
 }

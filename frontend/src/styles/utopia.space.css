@@ -1,0 +1,43 @@
+/* @link https://utopia.fyi/space/calculator?c=240,18,1.2,1920,20,1.25,5,2,&s=0.75|0.5|0.4|0.3|0.2|0.1,1.5|2|3|4|6|7|8,xs-m|xs-l|s-l|s-xl|m-xl|m-2xl|l-2xl|l-3xl&g=s,l,xl,12 */
+
+:root {
+  --sp-6xs: clamp(2.25px, 2.25px + 0vw, 2.25px);
+  --sp-5xs: clamp(4.5px, 4.5px + 0vw, 4.5px);
+  --sp-4xs: clamp(5.625px, 5.4528px + 0.0595vw, 6.75px);
+  --sp-3xs: clamp(7.875px, 7.7148px + 0.0595vw, 9px);
+  --sp-2xs: clamp(10.125px, 9.9648px + 0.0595vw, 11.25px);
+  --sp-xs: clamp(15.75px, 15.5898px + 0.0595vw, 16.875px);
+  --sp-s: clamp(20.25px, 19.9278px + 0.119vw, 22.5px);
+  --sp-m: clamp(30.375px, 29.8926px + 0.1786vw, 33.75px);
+  --sp-l: clamp(40.5px, 39.8574px + 0.2381vw, 45px);
+  --sp-xl: clamp(60.75px, 59.7852px + 0.3571vw, 67.5px);
+  --sp-2xl: clamp(81px, 79.7148px + 0.4762vw, 90px);
+  --sp-3xl: clamp(121.5px, 119.5712px + 0.7143vw, 135px);
+  --sp-4xl: clamp(141.75px, 139.5px + 0.8333vw, 157.5px);
+  --sp-5xl: clamp(162px, 159.4288px + 0.9524vw, 180px);
+
+  /* One-up pairs */
+  --sp-6xs-5xs: clamp(2.25px, 1.9278px + 0.119vw, 4.5px);
+  --sp-5xs-4xs: clamp(4.5px, 4.1778px + 0.119vw, 6.75px);
+  --sp-4xs-3xs: clamp(5.625px, 5.1426px + 0.1786vw, 9px);
+  --sp-3xs-2xs: clamp(7.875px, 7.3926px + 0.1786vw, 11.25px);
+  --sp-2xs-xs: clamp(10.125px, 9.1602px + 0.3571vw, 16.875px);
+  --sp-xs-s: clamp(15.75px, 14.7852px + 0.3571vw, 22.5px);
+  --sp-s-m: clamp(20.25px, 18.3218px + 0.7143vw, 33.75px);
+  --sp-m-l: clamp(30.375px, 28.2852px + 0.7738vw, 45px);
+  --sp-l-xl: clamp(40.5px, 36.6426px + 1.4286vw, 67.5px);
+  --sp-xl-2xl: clamp(60.75px, 56.5712px + 1.5476vw, 90px);
+  --sp-2xl-3xl: clamp(81px, 73.2852px + 2.8571vw, 135px);
+  --sp-3xl-4xl: clamp(121.5px, 116.3556px + 1.9048vw, 157.5px);
+  --sp-4xl-5xl: clamp(141.75px, 136.2852px + 2.0238vw, 180px);
+
+  /* Custom pairs */
+  --sp-xs-m: clamp(15.75px, 13.1778px + 0.9524vw, 33.75px);
+  --sp-xs-l: clamp(15.75px, 11.5716px + 1.5476vw, 45px);
+  --sp-s-l: clamp(20.25px, 16.7148px + 1.3095vw, 45px);
+  --sp-s-xl: clamp(20.25px, 13.5px + 2.5vw, 67.5px);
+  --sp-m-xl: clamp(30.375px, 25.0716px + 1.9643vw, 67.5px);
+  --sp-m-2xl: clamp(30.375px, 21.8574px + 3.1548vw, 90px);
+  --sp-l-2xl: clamp(40.5px, 33.4284px + 2.619vw, 90px);
+  --sp-l-3xl: clamp(40.5px, 27px + 5vw, 135px);
+}

@@ -53,15 +53,20 @@
   font-size: var(--sm);
 }
 
+.save {
+  width: 100%;
+  padding-right: var(--sp-xs);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-size: var(--xs);
+}
+
 .tableContainer {
   width: 100%;
   overflow-x: auto;
-}
-
-.table input {
-  width: 100%;
-  border: var(--border) solid var(--primary);
-  border-radius: var(--sp-3xs);
 }
 
 .table {
@@ -73,23 +78,21 @@
 .article {
   width: 10%;
 }
-
 .product {
   width: 30%;
 }
 .inPrice {
-  width: 10%;
+  width: 8%;
 }
 .price {
   width: 8%;
 }
 .unit {
-  width: 8%;
+  width: 10%;
 }
 .inStock {
   width: 8%;
 }
-
 .dotsth {
   width: 2%;
 }

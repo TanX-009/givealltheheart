@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Menu from "./components/Menu";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { FaPlus, FaPrint, FaSearch, FaToggleOn } from "react-icons/fa";
+import Editor from "./components/Editor";
 
 export default function PriceList() {
   const [tr, setTr] = useState({});
@@ -73,82 +74,64 @@ export default function PriceList() {
             </div>
           </div>
           <div className={styles.tableContainer}>
+            <span className={styles.save}>
+              *Press enter to save the entries
+            </span>
             <table className={styles.table}>
-              <tr>
-                <th className={styles.article}>Article No</th>
-                <th className={styles.product}>Product/Service</th>
-                <th className={`${styles.inPrice} ${styles.hideOnMobile}`}>
-                  In Price
-                </th>
-                <th className={`${styles.price} ${styles.hideOnMobile}`}>
-                  Price
-                </th>
-                <th className={`${styles.unit} ${styles.hideOnMobile}`}>
-                  Unit
-                </th>
-                <th className={`${styles.inStock} ${styles.hideOnTablet}`}>
-                  In Stock
-                </th>
-                <th className={`${styles.desc} ${styles.hideOnTablet}`}>
-                  Description
-                </th>
-                <th className={styles.dotsth}></th>
-              </tr>
-              {products.map((item, index) => (
-                <tr key={index}>
-                  <td>
-                    <input
-                      type="text"
-                      name="articleNo"
-                      defaultValue={item.articleNo}
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="text"
-                      name="product"
-                      defaultValue={item.product}
-                    />
-                  </td>
-                  <td className={styles.hideOnMobile}>
-                    <input
-                      type="number"
-                      name="inPrice"
-                      defaultValue={item.inPrice}
-                    />
-                  </td>
-                  <td className={styles.hideOnMobile}>
-                    <input
-                      type="number"
-                      step="0.01"
-                      name="price"
-                      defaultValue={item.price}
-                    />
-                  </td>
-                  <td className={styles.hideOnMobile}>
-                    <input type="text" name="unit" defaultValue={item.unit} />
-                  </td>
-                  <td className={styles.hideOnTablet}>
-                    <input
-                      type="number"
-                      name="inStock"
-                      defaultValue={item.inStock}
-                    />
-                  </td>
-                  <td className={styles.hideOnTablet}>
-                    <input
-                      type="text"
-                      name="description"
-                      defaultValue={item.description}
-                    />
-                  </td>
-                  <td>
-                    <button className={styles.dots} type="button">
-                      <HiOutlineDotsHorizontal />
-                    </button>
-                  </td>
+              <thead>
+                <tr>
+                  <th className={styles.article}>Article No</th>
+                  <th className={styles.product}>Product/Service</th>
+                  <th className={`${styles.inPrice} ${styles.hideOnMobile}`}>
+                    In Price
+                  </th>
+                  <th className={`${styles.price} ${styles.hideOnMobile}`}>
+                    Price
+                  </th>
+                  <th className={`${styles.unit} ${styles.hideOnMobile}`}>
+                    Unit
+                  </th>
+                  <th className={`${styles.inStock} ${styles.hideOnTablet}`}>
+                    In Stock
+                  </th>
+                  <th className={`${styles.desc} ${styles.hideOnTablet}`}>
+                    Description
+                  </th>
+                  <th className={styles.dotsth}></th>
                 </tr>
-              ))}
+              </thead>
+              <tbody>
+                {products.map((product, index) => (
+                  <tr key={index}>
+                    <td>
+                      <Editor product={product} attribute={"articleNo"} />
+                    </td>
+                    <td>
+                      <Editor product={product} attribute={"product"} />
+                    </td>
+                    <td className={styles.hideOnMobile}>
+                      <Editor product={product} attribute={"inPrice"} />
+                    </td>
+                    <td className={styles.hideOnMobile}>
+                      <Editor product={product} attribute={"price"} />
+                    </td>
+                    <td className={styles.hideOnMobile}>
+                      <Editor product={product} attribute={"unit"} />
+                    </td>
+                    <td className={styles.hideOnTablet}>
+                      <Editor product={product} attribute={"inStock"} />
+                    </td>
+                    <td className={styles.hideOnTablet}>
+                      <Editor product={product} attribute={"description"} />
+                    </td>
+                    <td>
+                      <button className={styles.dots} type="button">
+                        <HiOutlineDotsHorizontal />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
         </div>

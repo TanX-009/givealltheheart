@@ -1,0 +1,5 @@
+.input {
+  width: 100%;
+  border: var(--border) solid var(--primary);
+  border-radius: var(--sp-3xs);
+}

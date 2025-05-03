@@ -7,10 +7,11 @@ import Flag from "../../components/Flag";
 export default function Terms() {
   const [tr, setTr] = useState({});
   const [lang, setLang] = useState("en");
+
   useEffect(() => {
     const fetch = async () => {
       const data = await axios.get(
-        `http://localhost:5000/translate?language=${lang}&page=terms`,
+        `${import.meta.env.VITE_BACKEND_URL}/translate?language=${lang}&page=terms`,
       );
       const items = data.data.items;
       const translations = {};

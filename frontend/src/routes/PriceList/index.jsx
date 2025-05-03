@@ -15,7 +15,7 @@ export default function PriceList() {
   useEffect(() => {
     const fetch = async () => {
       const data = await axios.get(
-        `http://localhost:5000/translate?language=${lang}&page=home`,
+        `${import.meta.env.VITE_BACKEND_URL}/translate?language=${lang}&page=home`,
       );
       const items = data.data.items;
       const translations = {};
@@ -29,13 +29,14 @@ export default function PriceList() {
   }, [lang]);
   useEffect(() => {
     const fetch = async () => {
-      const data = await axios.get(`http://localhost:5000/product`);
+      const data = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/product`,
+      );
       setProducts(data.data.items);
     };
 
     fetch();
   }, []);
-  console.log(products);
 
   return (
     <div className={styles.pricelist}>

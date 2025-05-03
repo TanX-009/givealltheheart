@@ -17,10 +17,13 @@ export default function Editor({ product, attribute }) {
 
     setMessage("Saving...");
 
-    const data = await axios.patch("http://localhost:5000/product", {
-      ...product,
-      [attribute]: event.target[attribute].value,
-    });
+    const data = await axios.patch(
+      `${import.meta.env.VITE_BACKEND_URL}/product`,
+      {
+        ...product,
+        [attribute]: event.target[attribute].value,
+      },
+    );
 
     if (data.data.success) {
       setMessage("Saved!");
@@ -31,8 +34,6 @@ export default function Editor({ product, attribute }) {
     setTimeout(() => {
       setMessage("");
     }, 2000);
-
-    console.log(data);
   };
 
   return (

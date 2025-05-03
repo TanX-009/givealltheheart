@@ -44,3 +44,17 @@
 .location {
   font-size: var(--2xs);
 }
+
+.dontShowOnDesktop {
+  display: none;
+}
+
+@media (max-width: 80em) {
+  .dontShowOnMobile {
+    display: none;
+  }
+
+  .dontShowOnDesktop {
+    display: flex;
+  }
+}

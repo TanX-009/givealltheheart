@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import styles from "./styles.module.css";
 import Navbar from "./components/Navbar";
+import Menu from "./components/Menu";
 
 export default function PriceList() {
   const [tr, setTr] = useState({});
@@ -8,7 +10,7 @@ export default function PriceList() {
   useEffect(() => {
     const fetch = async () => {
       const data = await axios.get(
-        `http://localhost:5000/translate?language=${lang}&page=terms`,
+        `http://localhost:5000/translate?language=${lang}&page=home`,
       );
       const items = data.data.items;
       const translations = {};
@@ -21,8 +23,12 @@ export default function PriceList() {
     fetch();
   }, [lang]);
   return (
-    <div>
+    <div className={styles.pricelist}>
       <Navbar lang={lang} setLang={setLang} />
+      <div className={styles.main}>
+        <Menu dontShowOnMobile tr={tr} />
+        <div className={styles.page}></div>
+      </div>
     </div>
   );
 }

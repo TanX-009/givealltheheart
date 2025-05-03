@@ -1,0 +1,8 @@
+.pricelist {
+  width: 100%;
+}
+
+.main {
+  max-width: var(--max-view-width);
+  margin: 0 auto;
+}

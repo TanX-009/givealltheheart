@@ -1,10 +1,10 @@
 import styles from "./styles.module.css";
 import { FaUser } from "react-icons/fa";
 
-export default function Profile({ showOnDesktop = true }) {
+export default function Profile({ dontShowOnMobile = false }) {
   return (
     <div
-      className={`${styles.profile} ${showOnDesktop ? styles.showOnDesktop : styles.hideOnDesktop}`}
+      className={`${styles.profile} ${dontShowOnMobile ? styles.dontShowOnMobile : styles.dontShowOnDesktop}`}
     >
       <div className={styles.logo}>
         <FaUser />

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import LangDropdown from "../../../../components/LangDropdown";
 import styles from "./styles.module.css";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Navbar({ lang, setLang, languages, tr }) {
   const [display, setDisplay] = useState("none");
@@ -29,18 +30,7 @@ export default function Navbar({ lang, setLang, languages, tr }) {
           className={styles.hamburger}
           onClick={() => setDisplay(display === "flex" ? "none" : "flex")}
         >
-          <svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 24 24"
-            class="navigation-svg"
-            height="3em"
-            width="3em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
-          </svg>
+          <GiHamburgerMenu />
         </button>
         <div className={styles.buttons} style={{ display: display }}>
           <button>{tr?.home?.value}</button>

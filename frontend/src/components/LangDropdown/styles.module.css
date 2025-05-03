@@ -3,11 +3,7 @@
 
   position: relative;
 
-  outline: none;
-  border: none;
-
   color: var(--onPrimary);
-  background: none;
   appearance: none;
 
   display: flex;

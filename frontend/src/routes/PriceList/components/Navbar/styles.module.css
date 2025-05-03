@@ -16,3 +16,17 @@
   justify-content: space-between;
   gap: var(--sp-3xs);
 }
+
+.hamburgerButton {
+  display: none;
+
+  font-size: var(--h4);
+
+  color: var(--onPrimary);
+}
+
+@media (max-width: 80em) {
+  .hamburgerButton {
+    display: block;
+  }
+}

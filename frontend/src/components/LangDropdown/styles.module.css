@@ -27,9 +27,6 @@
   border: none;
 }
 
-.dropdown button > img {
-}
-
 .dropdownContent {
   padding: var(--sp-s) var(--sp-3xs);
 

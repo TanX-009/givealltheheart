@@ -14,11 +14,16 @@ import { IoMdCloseCircle } from "react-icons/io";
 import { MdLogout } from "react-icons/md";
 import styles from "./styles.module.css";
 import Profile from "../Profile";
-export default function Menu({ dontShowOnMobile = false, tr }) {
+export default function Menu({
+  tr,
+  className = null,
+  dontShowOnMobile = false,
+}) {
   return (
     <div
-      className={`${styles.menu} ${dontShowOnMobile ? styles.dontShowOnMobile : styles.dontShowOnDesktop}`}
+      className={`${className ? className : styles.menu} ${dontShowOnMobile ? styles.dontShowOnMobile : styles.dontShowOnDesktop}`}
     >
+      <Profile />
       <div className={styles.menuTitle}>{tr?.menu?.value}</div>
       <div className={styles.menuList}>
         <button className={styles.menuItem}>

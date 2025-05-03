@@ -1,5 +1,10 @@
 .menu {
+  position: sticky;
+  top: 0;
+  left: 0;
+
   width: 20%;
+  height: fit-content;
   max-width: calc(var(--sp-xl) * 4);
   padding: var(--sp-3xs) var(--sp-2xs);
   display: flex;

@@ -2,6 +2,16 @@
   width: 100%;
 }
 
+.menu {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  width: 20%;
+  height: fit-content;
+  max-width: calc(var(--sp-xl) * 4);
+}
+
 .main {
   max-width: var(--max-view-width);
   margin: 0 auto;
@@ -12,7 +22,7 @@
 .page {
   width: calc(100% - (var(--sp-xl) * 4));
   min-width: 80%;
-  padding: 0 var(--sp-l);
+  padding: 0 var(--sp-s-l);
 }
 
 .pageNav {
@@ -131,6 +141,10 @@
   }
 }
 
+.dontShowOnDesktop {
+  display: none;
+}
+
 @media (max-width: 48em) {
   .hideOnMobile {
     display: none;
@@ -143,5 +157,15 @@
 
   .funTitle {
     display: none;
+  }
+}
+
+@media (max-width: 80em) {
+  .dontShowOnMobile {
+    display: none;
+  }
+
+  .dontShowOnDesktop {
+    display: flex;
   }
 }

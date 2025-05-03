@@ -19,7 +19,7 @@
   border-radius: 100%;
 
   color: var(--onBackground);
-  background: var(--background);
+  background: var(--turquoise);
 }
 
 .dot {

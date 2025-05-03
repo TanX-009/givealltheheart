@@ -40,7 +40,7 @@ export default function PriceList() {
 
   return (
     <div className={styles.pricelist}>
-      <Navbar lang={lang} setLang={setLang} />
+      <Navbar lang={lang} setLang={setLang} tr={tr} />
       <div className={styles.main}>
         <Menu dontShowOnMobile tr={tr} />
         <div className={styles.page}>

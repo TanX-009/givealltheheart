@@ -167,6 +167,7 @@
   .functions {
     width: 100%;
     justify-content: space-evenly;
+    gap: var(--sp-3xs);
   }
 
   .funTitle {

@@ -47,11 +47,11 @@ export default function PriceList() {
           <div className={styles.pageNav}>
             <div className={styles.search}>
               <div className={styles.searchBar}>
-                <input type="text" placeholder="Search Article No" />
+                <input type="text" placeholder={tr?.search_article_no?.value} />
                 <FaSearch />
               </div>
               <div className={styles.searchBar}>
-                <input type="text" placeholder="Search Product" />
+                <input type="text" placeholder={tr?.search_product?.value} />
                 <FaSearch />
               </div>
             </div>
@@ -76,27 +76,29 @@ export default function PriceList() {
           </div>
           <div className={styles.tableContainer}>
             <span className={styles.save}>
-              *Press enter to save the entries
+              *{tr?.press_enter_to_save?.value}
             </span>
             <table className={styles.table}>
               <thead>
                 <tr>
-                  <th className={styles.article}>Article No</th>
-                  <th className={styles.product}>Product/Service</th>
+                  <th className={styles.article}>{tr?.article_no?.value}</th>
+                  <th className={styles.product}>
+                    {tr?.product_service?.value}
+                  </th>
                   <th className={`${styles.inPrice} ${styles.hideOnMobile}`}>
-                    In Price
+                    {tr?.in_price?.value}
                   </th>
                   <th className={`${styles.price} ${styles.hideOnMobile}`}>
-                    Price
+                    {tr?.price?.value}
                   </th>
                   <th className={`${styles.unit} ${styles.hideOnMobile}`}>
-                    Unit
+                    {tr?.unit?.value}
                   </th>
                   <th className={`${styles.inStock} ${styles.hideOnTablet}`}>
-                    In Stock
+                    {tr?.in_stock?.value}
                   </th>
                   <th className={`${styles.desc} ${styles.hideOnTablet}`}>
-                    Description
+                    {tr?.description?.value}
                   </th>
                   <th className={styles.dotsth}></th>
                 </tr>

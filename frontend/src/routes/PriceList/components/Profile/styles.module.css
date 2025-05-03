@@ -1,0 +1,46 @@
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--sp-xs);
+}
+
+.logo {
+  position: relative;
+  padding: var(--sp-xs);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--h5);
+
+  border-radius: 100%;
+
+  color: var(--onBackground);
+  background: var(--background);
+}
+
+.dot {
+  width: var(--sp-3xs);
+  aspect-ratio: 1/1;
+
+  border-radius: 50px;
+
+  position: absolute;
+  top: 80%;
+  left: 90%;
+
+  background: var(--brightGreen);
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5xs);
+}
+
+.location {
+  font-size: var(--2xs);
+}

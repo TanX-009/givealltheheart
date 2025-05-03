@@ -56,7 +56,7 @@
   font-size: var(--sm);
 
   color: var(--onPrimary);
-  background: #089e1e;
+  background: var(--green);
 }
 
 .gap {

@@ -4,12 +4,15 @@ const {
   deletePriceItem,
   getPriceItems,
   updatePriceItem,
+  addBulkPriceItems,
 } = require("../controller/priceList");
 const router = express.Router();
 
 router.get("/", getPriceItems);
-router.post("/", addPriceItem);
+router.put("/", addPriceItem);
 router.patch("/", updatePriceItem);
 router.delete("/:id", deletePriceItem);
+
+router.put("/bulk", addBulkPriceItems);
 
 module.exports = router;

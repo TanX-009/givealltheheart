@@ -43,6 +43,33 @@ exports.addPriceItem = async (req, res) => {
   }
 };
 
+exports.addBulkPriceItems = async (req, res) => {
+  try {
+    console.log(req.body); // should be an array of translation objects
+
+    if (!Array.isArray(req.body)) {
+      return res.status(400).json({
+        success: false,
+        message: "Request body must be an array of translations.",
+      });
+    }
+
+    const items = await PriceList.bulkCreate(req.body);
+
+    res.status(201).json({
+      success: true,
+      message: "Products added",
+      items,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: error.message || "Error adding products",
+    });
+  }
+};
+
 exports.deletePriceItem = async (req, res) => {
   try {
     const { id } = req.params;

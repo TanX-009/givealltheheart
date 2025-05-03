@@ -26,7 +26,7 @@
 
 .text {
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 750px;
 
   padding: var(--sp-l);
 

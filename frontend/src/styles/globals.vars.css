@@ -2,4 +2,12 @@ button {
   outline: none;
   border: none;
   background: none;
+  font-size: inherit;
+}
+
+input {
+  padding: var(--sp-5xs);
+  outline: none;
+  border: none;
+  font-size: inherit;
 }

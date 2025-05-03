@@ -14,7 +14,7 @@ app.use(
   }),
 );
 
-app.use("/prices", priceRoutes);
+app.use("/product", priceRoutes);
 app.use("/translate", translationRoutes);
 
 sinc();

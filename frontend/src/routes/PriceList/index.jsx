@@ -78,7 +78,7 @@ export default function PriceList() {
             <span className={styles.save}>
               *{tr?.press_enter_to_save?.value}
             </span>
-            <table className={styles.table}>
+            <table className={styles.table} cellSpacing={5}>
               <thead>
                 <tr>
                   <th className={styles.article}>{tr?.article_no?.value}</th>

@@ -2,8 +2,8 @@
   --max-width: 900px;
   --max-width: 56.25rem;
 
-  --max-view-width: 1440px;
-  --max-view-width: 90rem;
+  --max-view-width: 1920px;
+  --max-view-width: 120rem;
 
   --radius: var(--sp-2xs-xs);
   --border: calc(var(--sp-6xs) / 2);

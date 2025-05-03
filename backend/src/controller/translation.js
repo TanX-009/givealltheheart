@@ -53,3 +53,34 @@ exports.addBulkTranslation = async (req, res) => {
     });
   }
 };
+
+exports.deleteBulkTranslations = async (req, res) => {
+  try {
+    const { page, language } = req.body;
+
+    if (!page || !language) {
+      return res.status(400).json({
+        success: false,
+        message: "Both 'page' and 'language' are required.",
+      });
+    }
+
+    const deletedCount = await Translation.destroy({
+      where: {
+        page,
+        language,
+      },
+    });
+
+    res.status(200).json({
+      success: true,
+      message: `${deletedCount} translation(s) deleted for page '${page}' and language '${language}'.`,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: error.message || "Error deleting translations",
+    });
+  }
+};

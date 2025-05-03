@@ -16,7 +16,6 @@
 .bg {
   max-width: 100%;
   min-height: 100%;
-  aspect-ratio: 1465/1900;
   object-fit: cover;
 
   position: fixed;
@@ -24,6 +23,7 @@
   left: 0;
   z-index: -1;
 }
+
 .text {
   width: 100%;
   max-width: var(--max-width);
@@ -33,15 +33,17 @@
   border-radius: 20px;
 
   font-size: var(--xs);
+  font-weight: 500;
+  line-height: 2.6ch;
   text-align: center;
 
-  color: var(--onBackground);
+  color: #00000099;
   background: var(--background);
 }
 
 .back {
-  padding: var(--sp-xs) var(--sp-l);
-  margin: var(--sp-m) 0;
+  padding: var(--sp-xs) var(--sp-xl);
+  margin: var(--sp-s) 0 var(--sp-m) 0;
 
   display: flex;
   align-items: center;
@@ -51,8 +53,13 @@
   border: none;
   outline: none;
 
-  font-size: var(--xs);
+  font-size: var(--sm);
 
   color: var(--onPrimary);
   background: #089e1e;
+}
+
+.gap {
+  padding: var(--sp-xs);
+  width: 100%;
 }

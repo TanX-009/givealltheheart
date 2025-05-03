@@ -32,24 +32,24 @@ body {
 
 /* scrollbar */
 /* width */
-::-webkit-scrollbar {
-  width: var(--sp-3xs);
-  height: var(--sp-3xs);
-}
+/* ::-webkit-scrollbar { */
+/*   width: var(--sp-3xs); */
+/*   height: var(--sp-3xs); */
+/* } */
 
 /* Track */
-::-webkit-scrollbar-track {
-  background: var(--surfaceContainer);
-  border-radius: calc(var(--radius) / 3);
-}
+/* ::-webkit-scrollbar-track { */
+/*   background: var(--surfaceContainer); */
+/*   border-radius: calc(var(--radius) / 3); */
+/* } */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--secondary);
-  border-radius: calc(var(--radius) / 3);
-}
+/* ::-webkit-scrollbar-thumb { */
+/*   background: var(--secondary); */
+/*   border-radius: calc(var(--radius) / 3); */
+/* } */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--outline);
-}
+/* ::-webkit-scrollbar-thumb:hover { */
+/*   background: var(--outline); */
+/* } */

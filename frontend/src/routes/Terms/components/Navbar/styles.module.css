@@ -1,8 +1,8 @@
 .nav {
   margin: 0 auto;
-  padding: var(--sp-l) var(--sp-m) var(--sp-m) var(--sp-m);
+  padding: var(--sp-m) var(--sp-3xs) var(--sp-xs) var(--sp-3xs);
   width: 100%;
-  max-width: var(--max-view-width);
+  max-width: 90rem;
 
   display: flex;
   align-items: center;
@@ -14,11 +14,12 @@
   height: var(--sp-m);
 }
 
-.buttons {
+.buttons,
+.right {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--sp-xl);
+  gap: var(--sp-l);
 }
 
 .buttons > button {
@@ -26,7 +27,57 @@
   outline: none;
 
   font-size: var(--xs);
+  font-weight: 500;
 
   color: var(--onPrimary);
   background: none;
+}
+
+.hamburger {
+  display: none;
+
+  color: var(--onPrimary);
+  background: none;
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 80em) {
+  .diamond {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .right {
+    position: relative;
+    width: 100%;
+  }
+
+  .buttons {
+    padding: var(--sp-m);
+    width: 20rem;
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-l);
+
+    position: absolute;
+    top: 100%;
+
+    background: var(--background);
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  }
+
+  .buttons > button {
+    font-size: var(--sm);
+    font-weight: 600;
+
+    color: #000;
+  }
 }

@@ -26,7 +26,7 @@
 }
 
 .pageNav {
-  padding: var(--sp-3xs) var(--sp-m);
+  padding: var(--sp-xs) var(--sp-xs-m);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -172,6 +172,10 @@
 
   .funTitle {
     display: none;
+  }
+
+  .pageNav {
+    padding: var(--sp-xs) var(--sp-4xs);
   }
 }
 

@@ -35,11 +35,19 @@
 
 .search {
   font-size: var(--sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3xs);
 }
 
 .searchBar {
-  display: flex;
   padding: var(--sp-3xs);
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 40px;
+  box-shadow: 0 0 5px var(--grey);
 }
 .searchBar > svg {
   color: var(--primary);
@@ -53,9 +61,15 @@
 }
 
 .functions > button {
+  padding: var(--sp-2xs) var(--sp-s);
+
   display: flex;
   align-items: center;
   gap: var(--sp-3xs);
+
+  border-radius: 50px;
+
+  box-shadow: 0 0 5px var(--grey);
 }
 
 .functions > button > svg {
